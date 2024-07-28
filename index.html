@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Table</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        STUDENT PORTAL
+    </header>
+    <div class="container">
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Search by name or email" onkeyup="handleSearch()">
+            <button onclick="handleSearch()">Search</button>
+        </div>
+        <div class="buttons">
+            <button onclick="sortByName('asc')">Sort A->Z</button>
+            <button onclick="sortByName('desc')">Sort Z->A</button>
+            <button onclick="sortByMarks()">Sort by Marks</button>
+            <button onclick="sortByPassing()">Sort by Passing</button>
+            <button onclick="sortByClass()">Sort by Class</button>
+            <button onclick="sortByGender()">Sort by Gender</button>
+        </div>
+        <div id="tables">
+            <table id="student-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Gender</th>
+                        <th>Class</th>
+                        <th>Marks</th>
+                        <th>Status</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dynamic content goes here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
